@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snake - GameZone</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body class="snake-page">
+
+    <header>
+
+        <h1>🎮 GameZone</h1>
+
+        <a href="/" class="back-button">
+            ← Back to Games
+        </a>
+
+    </header>
+
+
+    <main class="snake-container">
+
+        <h2>🐍 Snake</h2>
+
+        <div class="score">
+
+            Score: <span id="score">0</span>
+
+            &nbsp;&nbsp;
+
+            High Score: <span id="highScore">0</span>
+
+        </div>
+
+
+        <canvas
+            id="gameCanvas"
+            width="600"
+            height="600">
+        </canvas>
+
+
+        <p class="controls">
+            Use the <b>Arrow Keys</b> to control the snake
+        </p>
+
+
+        <button id="restartButton">
+            Restart Game
+        </button>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='snake.js') }}"></script>
+
+</body>
+
+</html>

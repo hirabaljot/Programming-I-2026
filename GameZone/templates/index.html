@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🎮 GameZone</h1>
+
+        <input
+            type="text"
+            id="searchBar"
+            placeholder="Search games..."
+        >
+    </header>
+
+
+    <!-- Categories -->
+    <nav>
+        <button>All</button>
+        <button>Action</button>
+        <button>Racing</button>
+        <button>Puzzle</button>
+        <button>Sports</button>
+        <button>Arcade</button>
+    </nav>
+
+
+    <!-- Games -->
+    <main>
+
+        <h2>Popular Games</h2>
+
+        <div class="game-grid">
+
+            <!-- Snake -->
+            <div class="game-card">
+                <div class="game-image">🐍</div>
+
+                <h3>Snake</h3>
+
+                <p>Arcade</p>
+
+                <a href="/snake" class="play-button">
+                    Play
+                </a>
+            </div>
+
+
+            <!-- Racing -->
+            <div class="game-card">
+                <div class="game-image">🏎️</div>
+
+                <h3>Racing</h3>
+
+                <p>Racing</p>
+
+                <button onclick="playGame('Racing')">
+                    Play
+                </button>
+            </div>
+
+
+            <!-- Football -->
+            <div class="game-card">
+                <div class="game-image">⚽</div>
+
+                <h3>Football</h3>
+
+                <p>Sports</p>
+
+                <button onclick="playGame('Football')">
+                    Play
+                </button>
+            </div>
+
+
+            <!-- Puzzle -->
+            <div class="game-card">
+                <div class="game-image">🧩</div>
+
+                <h3>Puzzle</h3>
+
+                <p>Puzzle</p>
+
+                <button onclick="playGame('Puzzle')">
+                    Play
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
